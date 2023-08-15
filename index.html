@@ -3,16 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
+    <style>
+        body { margin: 0; position: relative; }
+        canvas { display: block; }
+        div[title="body_contents"] { position: absolute; top: 0; left: 0; }
+      </style>
 </head>
 
 <body>
-    test3 <br>
-    <input type="text" id="player_name" placeholder="参加者名">
-    <button id="add_player" onclick="add_player()">追加</button>
-    <ul id="list"> </ul>
-    <div id="playing"></div>
-    <div id="resting"></div>
-    <script src="script.js"></script>
+    <div title="body_contents" id="body_contents">
+        <button id="debug01" onclick="debug01()">デバッグ01</button> <br>
+
+        <button id="assign" onclick="assign()">コート割り当て</button> <br>
+    
+        参加者 <br>
+        <input type="text" id="player_name" placeholder="参加者名">
+        <button id="add_player" onclick="add_player()">追加</button>
+        <ul id="list"> </ul>
+        <div id="playing"></div>
+    
+        休憩中 <br>
+        <div id="resting"></div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/three@0.131.3/examples/js/controls/OrbitControls.js"></script>
+        <script src="script.js"></script>
+    </div>
 </body>
 
 </html>
