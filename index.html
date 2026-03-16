@@ -14,16 +14,27 @@
     <div title="body_contents" id="body_contents">
         <button id="debug01" onclick="debug01()">デバッグ01</button> <br>
 
-        <button id="assign" onclick="assign()">コート割り当て</button> <br>
     
         参加者 <br>
-        <input type="text" id="player_name" placeholder="参加者名">
+        <input type="text" id="player_name" placeholder="参加者名" onkeypress="handleKeyPress(event)">
         <button id="add_player" onclick="add_player()">追加</button>
+        <div id="error_message" style="color: red; font-size: 12px; margin: 5px 0;"></div>
         <ul id="list"> </ul>
         <div id="playing"></div>
+
+        コート数
+        <select id="court_num">
+        </select>
+
+        <button id="assign" onclick="assign()">コート割り当て</button> <br>
+        
+        <div id="court_info" style="margin: 10px 0;"></div>
     
         休憩中 <br>
         <div id="resting"></div>
+        
+        待機中 <br>
+        <div id="waiting"></div>
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
         <script type="text/javascript" src="https://unpkg.com/three@0.131.3/examples/js/controls/OrbitControls.js"></script>
